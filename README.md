@@ -224,7 +224,7 @@ private int[] viewIDs = { R.id.text1,R.id.text2 };
 
 ​      效果截图：
 
-![image-20201220142926139](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20201220142926139.png)
+![image-20201220142926139](https://github.com/wangwang01-wzx/midterm/blob/main/image-20201220142926139.png)
 
 ![image-20201220143001157](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20201220143001157.png)
 
