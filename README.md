@@ -711,12 +711,10 @@ public static final String COLUMN_TAG_SELECTION_INDEX="tag";
                  app:actionProviderClass="android.support.v7.app.MediaRouteActionProvider"
                  tools:icon="@drawable/mr_button_light" />
          </menu>
-         ```
+    ```
+  效果截图：
 
-         效果截图：
-
-         ![image-20201220151152861](https://github.com/wangwang01-wzx/midterm/blob/main/image-20201220151152861.png)
-
+  ![image-20201220151152861](https://github.com/wangwang01-wzx/midterm/blob/main/image-20201220151152861.png)
 （2）修改背景颜色
 
 ​      1.在editor_options_menu.xml中添加修改颜色这一选项，并划分为两类，修改背景颜色和修改字体颜色
