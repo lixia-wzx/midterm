@@ -226,7 +226,7 @@ private int[] viewIDs = { R.id.text1,R.id.text2 };
 
 ![image-20201220142926139](https://github.com/wangwang01-wzx/midterm/blob/main/image-20201220142926139.png)
 
-![image-20201220143001157](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20201220143001157.png)
+![image-20201220143001157](https://github.com/wangwang01-wzx/midterm/blob/main/image-20201220143001157.png)
 
 三： 实现笔记分类功能
 
@@ -369,9 +369,9 @@ public static final String COLUMN_TAG_SELECTION_INDEX="tag";
 
 ​    效果截图：
 
-![image-20201220144924929](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20201220144924929.png)
+![image-20201220144924929](https://github.com/wangwang01-wzx/midterm/blob/main/image-20201220144924929.png)
 
-![image-20201220144941990](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20201220144941990.png)
+![image-20201220144941990](https://github.com/wangwang01-wzx/midterm/blob/main/image-20201220144941990.png)
 
 （4）显示侧滑菜单栏的效果
 
@@ -479,7 +479,7 @@ public static final String COLUMN_TAG_SELECTION_INDEX="tag";
 
 实现效果：
 
-![image-20201220145447687](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20201220145447687.png)
+![image-20201220145447687](https://github.com/wangwang01-wzx/midterm/blob/main/image-20201220145447687.png)
 
 ​     （6)在NoteList.java中增加点击分类事件
 
@@ -649,9 +649,9 @@ public static final String COLUMN_TAG_SELECTION_INDEX="tag";
 
 效果截图
 
-![image-20201220150220653](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20201220150220653.png)
+![image-20201220150220653](https://github.com/wangwang01-wzx/midterm/blob/main/image-20201220150220653.png)
 
-![image-20201220150241908](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20201220150241908.png)
+![image-20201220150241908](https://github.com/wangwang01-wzx/midterm/blob/main/image-20201220150241908.png)
 
 四： 实现UI美化
 
@@ -715,7 +715,7 @@ public static final String COLUMN_TAG_SELECTION_INDEX="tag";
 
          效果截图：
 
-         ![image-20201220151152861](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20201220151152861.png)
+         ![image-20201220151152861](https://github.com/wangwang01-wzx/midterm/blob/main/image-20201220151152861.png)
 
 （2）修改背景颜色
 
@@ -756,9 +756,9 @@ public static final String COLUMN_TAG_SELECTION_INDEX="tag";
 
 效果截图
 
-![image-20201220151923594](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20201220151923594.png)
+![image-20201220151923594](https://github.com/wangwang01-wzx/midterm/blob/main/image-20201220151923594.png)
 
-![image-20201220153021169](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20201220153021169.png)
+![image-20201220153021169](https://github.com/wangwang01-wzx/midterm/blob/main/image-20201220153021169.png)
 
 2.采用AlertDialog来实现界面交互效果，修改颜色调用的是函数showColor()，在NoteEditor增加点击事件
 
@@ -869,6 +869,6 @@ public static final String COLUMN_TAG_SELECTION_INDEX="tag";
 
 效果截图：
 
-![image-20201220153436346](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20201220153436346.png)
+![image-20201220153436346](https://github.com/wangwang01-wzx/midterm/blob/main/image-20201220153436346.png)
 
-![image-20201220153454636](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20201220153454636.png)
+![image-20201220153454636](https://github.com/wangwang01-wzx/midterm/blob/main/image-20201220153454636.png)
