@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1389605510/MyNotePad-master.iml" filepath="$PROJECT_DIR$/.idea/modules/1389605510/MyNotePad-master.iml" group="MyNotePad-master" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app.iml" group="MyNotePad-master/app" />
+    </modules>
+  </component>
+</project>
