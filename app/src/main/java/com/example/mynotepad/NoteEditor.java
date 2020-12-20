@@ -145,15 +145,7 @@ public class NoteEditor extends AppCompatActivity {
                     colorText="#FF8C00";
                 }
                 break;
-            case R.id.chocolate:
-                if(isFlag){
-                    mText.setBackgroundColor(Color.parseColor("#D2691E"));
-                    colorBack="#D2691E";
-                }else{
-                    mText.setTextColor(Color.parseColor("#D2691E"));
-                    colorText="#D2691E";
-                }
-                break;
+
             case R.id.aqua:
                 if(isFlag){
                     mText.setBackgroundColor(Color.parseColor("#00FFFF"));
@@ -163,15 +155,7 @@ public class NoteEditor extends AppCompatActivity {
                     colorText="#00FFFF";
                 }
                 break;
-            case R.id.gray:
-                if(isFlag){
-                    mText.setBackgroundColor(Color.parseColor("#696969"));
-                    colorBack="#696969";
-                }else{
-                    mText.setTextColor(Color.parseColor("#696969"));
-                    colorText="#696969";
-                }
-                break;
+
             case R.id.pink:
                 if(isFlag){
                     mText.setBackgroundColor(Color.parseColor("#D81B60"));
@@ -354,7 +338,6 @@ public class NoteEditor extends AppCompatActivity {
         });
         alertDialog=tagbuilder.create();
         alertDialog.show();
-
     }
 
     /**
@@ -722,7 +705,7 @@ public class NoteEditor extends AppCompatActivity {
     }
     private void showColor(){
         AlertDialog alertDialog=new AlertDialog.Builder(this).setTitle("请选择颜色").
-                setIcon(R.mipmap.ic_launcher).setView(R.layout.color_layout)
+               setView(R.layout.color_layout)
                 .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -811,10 +794,7 @@ public class NoteEditor extends AppCompatActivity {
                 isFlag=true;
                 showColor();
                 break;
-            case R.id.text_color:
-                isFlag=false;
-                showColor();
-                break;
+
                 /*
             case R.id.set_date:
                 createDateDialog();
@@ -1007,31 +987,16 @@ public class NoteEditor extends AppCompatActivity {
         Date nowTime = new Date(System.currentTimeMillis());
         SimpleDateFormat sdFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String retStrFormatNowDate = sdFormatter.format(nowTime);
-
-        // Sets up a map to contain values to be updated in the provider.
         ContentValues values = new ContentValues();
         values.put(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, retStrFormatNowDate);
         values.put(NotePad.Notes.COLUMN_TAG_SELECTION_INDEX,items[checkItem]);
         values.put(NotePad.Notes.COLUMN_BACKGROUND_COLOR,colorBack);
         values.put(NotePad.Notes.COLUMN_TEXT_COLOR,colorText);
-
         values.put(NotePad.Notes.COLUMN_TEXT_NOTIFICATION_DATE,date+time);
-
-        // If the action is to insert a new note, this creates an initial title for it.
         if (mState == STATE_INSERT) {
-
-            // If no title was provided as an argument, create one from the note text.
             if (title == null) {
-
-                // Get the note's length
                 int length = text.length();
-
-                // Sets the title by getting a substring of the text that is 31 characters long
-                // or the number of characters in the note plus one, whichever is smaller.
                 title = text.substring(0, Math.min(5, length));
-
-                // If the resulting length is more than 30 characters, chops off any
-                // trailing spaces
                 if (length > 30) {
                     int lastSpace = title.lastIndexOf(' ');
                     if (lastSpace > 0) {
@@ -1039,30 +1004,12 @@ public class NoteEditor extends AppCompatActivity {
                     }
                 }
             }
-
-            // In the values map, sets the value of the title
             values.put(NotePad.Notes.COLUMN_NAME_TITLE, title);
 
         } else if (title != null) {
-            // In the values map, sets the value of the title
             values.put(NotePad.Notes.COLUMN_NAME_TITLE, title);
         }
-
-        // This puts the desired notes text into the map.
         values.put(NotePad.Notes.COLUMN_NAME_NOTE, text);
-
-        /*
-         * Updates the provider with the new values in the map. The ListView is updated
-         * automatically. The provider sets this up by setting the notification URI for
-         * query Cursor objects to the incoming URI. The content resolver is thus
-         * automatically notified when the Cursor for the URI changes, and the UI is
-         * updated.
-         * Note: This is being done on the UI thread. It will block the thread until the
-         * update completes. In a sample app, going against a simple provider based on a
-         * local database, the block will be momentary, but in a real app you should use
-         * android.content.AsyncQueryHandler or android.os.AsyncTask.
-         */
-
         getContentResolver().update(
                 mUri,    // The URI for the record to update.
                 values,  // The map of column names and new values to apply to them.

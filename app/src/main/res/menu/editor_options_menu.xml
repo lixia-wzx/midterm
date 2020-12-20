@@ -23,9 +23,7 @@
                 android:title="改变背景颜色"
                 android:id="@+id/background-color">
             </item>
-            <item android:id="@+id/text-color"
-                android:title="改变字体颜色">
-            </item>
+
         </menu>
     </item>
 

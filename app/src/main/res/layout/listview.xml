@@ -5,14 +5,12 @@
     android:id="@+id/dl"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:focusableInTouchMode="true"
         android:focusable="true"
-
        >
         <android.support.v7.widget.Toolbar
             android:id="@+id/tb"
@@ -23,30 +21,22 @@
             app:title="NotePad"
             app:navigationIcon="?attr/homeAsUpIndicator"
             >
-
         </android.support.v7.widget.Toolbar>
-
         <android.support.v7.widget.SearchView
             android:id="@+id/sv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             >
-
         </android.support.v7.widget.SearchView>
-
         <android.support.design.widget.CoordinatorLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-
             <ListView
                 android:id="@+id/tv"
                 android:layout_width="match_parent"
                 android:layout_height="527dp"/>
 
         </android.support.design.widget.CoordinatorLayout>
-
-
     </LinearLayout>
     <android.support.design.widget.NavigationView
         android:id="@+id/nv"
@@ -57,7 +47,6 @@
         app:headerLayout="@layout/nv_header"
         app:menu="@menu/nv_menu"
         >
-
     </android.support.design.widget.NavigationView>
 </android.support.v4.widget.DrawerLayout>
 

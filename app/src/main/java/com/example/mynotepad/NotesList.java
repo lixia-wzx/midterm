@@ -310,44 +310,40 @@ public class NotesList extends AppCompatActivity implements LoaderManager.Loader
     private void SearchView(){
         searchView=findViewById(R.id.sv);
         searchView.onActionViewExpanded();
-        searchView.setQueryHint("搜索笔记");
+        searchView.setQueryHint("搜索");
         searchView.setSubmitButtonEnabled(true);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
                 return false;
             }
-
             @Override
             public boolean onQueryTextChange(String s) {
                 if(!s.equals("")){
                     String selection=NotePad.Notes.COLUMN_NAME_TITLE+" GLOB '*"+s+"*'";
                     updatecursor = getContentResolver().query(
-                            getIntent().getData(),            // Use the default content URI for the provider.
-                            PROJECTION,                       // Return the note ID and title for each note.
-                            selection,                             // No where clause, return all records.
-                            null,                             // No where clause, therefore no where column values.
-                            NotePad.Notes.DEFAULT_SORT_ORDER  // Use the default sort order.
+                            getIntent().getData(),
+                            PROJECTION,
+                            selection,
+                            null,
+                            NotePad.Notes.DEFAULT_SORT_ORDER
                     );
                     if(updatecursor.moveToNext())
                         Log.i("daawdwad",selection);
                 }
                else {
                     updatecursor = getContentResolver().query(
-                            getIntent().getData(),            // Use the default content URI for the provider.
-                            PROJECTION,                       // Return the note ID and title for each note.
-                            null,                             // No where clause, return all records.
-                            null,                             // No where clause, therefore no where column values.
-                            NotePad.Notes.DEFAULT_SORT_ORDER  // Use the default sort order.
+                            getIntent().getData(),
+                            PROJECTION,
+                            null,
+                            null,
+                            NotePad.Notes.DEFAULT_SORT_ORDER
                     );
                 }
                 adapter.swapCursor(updatecursor);
-
-               // adapter.notifyDataSetChanged();
                 return false;
             }
         });
-
     }
     @Override
     protected void onResume() {

@@ -27,28 +27,22 @@ import android.provider.BaseColumns;
  */
 public final class NotePad {
     public static final String AUTHORITY = "com.google.provider.NotePad";
-
     // This class cannot be instantiated
     private NotePad() {
     }
-
     /**
      * Notes table contract
      */
     public static final class Notes implements BaseColumns {
-
         // This class cannot be instantiated
         private Notes() {}
-
         /**
          * The table name offered by this provider
          */
         public static final String TABLE_NAME = "notes";
-
         /*
          * URI definitions
          */
-
         /**
          * The scheme part for this provider's URI
          */
@@ -122,11 +116,9 @@ public final class NotePad {
          * The default sort order for this table
          */
         public static final String DEFAULT_SORT_ORDER = "modified DESC";
-
         /*
          * Column definitions
          */
-
         /**
          * Column name for the title of the note
          * <P>Type: TEXT</P>
